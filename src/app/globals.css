@@ -128,3 +128,342 @@
     @apply font-sans;
   }
 }
+/* ==========================================================================
+   Cuna&Co. brand tokens.
+
+   Layout/structure is inherited from the FintechX Framer clone, but every
+   colour, font and shadow below is remapped to the Cuna&Co. brand kit
+   (artifact 6957d3d3 — palette taken from the app's `Color.kt`) and the
+   official brand manual: Turquesa #4FD3C4, Naranja #FFBD05/#FFBD35,
+   Gris #878787. The `--fx-*` prefix is kept so the cloned section components
+   keep resolving without a rename sweep.
+   ========================================================================== */
+
+@theme inline {
+  --font-inter: var(--fx-font-body);
+  --font-inter-display: var(--fx-font-display);
+  --font-cuna-display: var(--fx-font-display);
+  --font-cuna-body: var(--fx-font-body);
+
+  --color-fx-brand-600: #2fa79a;
+  --color-fx-brand-500: #4fd3c4;
+  --color-fx-brand-400: #6fdcd0;
+  --color-fx-ink: #1d6259;
+  --color-fx-ink-700: #2fa79a;
+  --color-fx-body: #5e6968;
+  --color-fx-gray-400: #bfbfbf;
+  --color-fx-surface-100: #f7f3ed;
+  --color-fx-surface-200: #e3dcd1;
+  --color-fx-sky-50: #e8f8f6;
+  --color-fx-border: #1d62591a;
+  --color-fx-success: #2fa79a;
+  --color-fx-green: #34c77b;
+  --color-fx-green-300: #9fe0bd;
+  --color-fx-danger: #e2585f;
+  --color-fx-danger-300: #f5c6c6;
+  --color-fx-warning: #ffbd35;
+  --color-fx-warning-300: #ffe599;
+
+  /* Cuna&Co. semantic aliases (new components should prefer these) */
+  --color-cuna-teal: #4fd3c4;
+  --color-cuna-teal-deep: #2fa79a;
+  --color-cuna-teal-dark: #12403b;
+  --color-cuna-aqua: #aeebe4;
+  --color-cuna-yellow: #ffbd35;
+  --color-cuna-yellow-soft: #ffe599;
+  --color-cuna-cream: #f7f3ed;
+  --color-cuna-gray: #878787;
+}
+
+:root {
+  /* Raw palette — Cuna&Co. brand kit */
+  --fx-brand-600: #2fa79a; /* Turquesa profundo — hover / texto sobre claro */
+  --fx-brand-500: #4fd3c4; /* Turquesa marca */
+  --fx-brand-400: #6fdcd0;
+  --fx-brand-500-50: #4fd3c480;
+  --fx-ink: #1d6259; /* Turquesa profundo — titulares (la marca no usa negro) */
+  --fx-ink-50: #1d625980;
+  --fx-ink-700: #2fa79a;
+  --fx-body: #5e6968;
+  --fx-black: #12403b; /* el tono más oscuro de la marca sigue siendo turquesa */
+  --fx-black-80: #12403bcc;
+  --fx-black-30: #12403b4d;
+  --fx-black-20: #12403b33;
+  --fx-border: #1d62591a;
+  --fx-gray-400: #bfbfbf;
+  --fx-surface-100: #f7f3ed; /* Crema */
+  --fx-surface-200: #e3dcd1;
+  --fx-surface-200-70: #e3dcd1b3;
+  --fx-sky-50: #e8f8f6; /* Aqua muy claro */
+  --fx-white-70: #ffffffb3;
+  --fx-white-50: #ffffff80;
+  --fx-white-30: #ffffff4d;
+  --fx-white-10: #ffffff1a;
+  --fx-success: #2fa79a;
+  --fx-success-30: #2fa79a4d;
+  --fx-success-20: #2fa79a33;
+  --fx-success-10: #2fa79a1a;
+  --fx-green: #34c77b;
+  --fx-green-300: #9fe0bd;
+  --fx-danger: #e2585f;
+  --fx-danger-300: #f5c6c6;
+  --fx-danger-30: #e2585f4d;
+  --fx-danger-5: #e2585f0d;
+  --fx-warning: #ffbd35; /* Naranja marca */
+  --fx-warning-300: #ffe599;
+
+  /* Cuna&Co. aliases */
+  --cuna-teal: #4fd3c4;
+  --cuna-teal-deep: #2fa79a;
+  --cuna-teal-dark: #12403b;
+  --cuna-aqua: #aeebe4;
+  --cuna-yellow: #ffbd35;
+  --cuna-yellow-soft: #ffe599;
+  --cuna-cream: #f7f3ed;
+  --cuna-cream-2: #fdfbf7;
+  --cuna-gray: #878787;
+  --cuna-line: #e3dcd1;
+
+  /* Signature shadows */
+  --fx-shadow-nav: 0 0 0 4px rgb(227 220 209 / 0.7);
+  --fx-shadow-button: inset 4px 4px 8px 0 rgb(255 255 255 / 0.35),
+    inset -4px -4px 8px 0 rgb(255 255 255 / 0.35),
+    0 4px 16px 0 rgb(18 64 59 / 0.35);
+  --fx-gradient-dark: linear-gradient(110deg, #2fa79a 0%, #1d6259 100%);
+}
+
+@layer base {
+  html.fx-page,
+  html.fx-page body {
+    background: var(--cuna-cream-2);
+    color: var(--fx-body);
+  }
+
+  /* Cuna&Co. uses Quicksand for body copy — a rounded geometric sans that
+     matches the app's own type. Fredoka stands in for Helvetica Rounded Bold
+     (commercial, not web-licensed — see SITE_PLAN §6 / open question 0). */
+  .fx-page body {
+    font-family: var(--fx-font-body), "Quicksand", ui-rounded, system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.35em;
+    letter-spacing: 0;
+  }
+
+  .fx-page h1,
+  .fx-page h2,
+  .fx-page h3,
+  .fx-page h4,
+  .fx-page h5,
+  .fx-page h6 {
+    font-family: var(--fx-font-display), "Fredoka", ui-rounded, system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fx-ink);
+  }
+
+  .fx-page h1,
+  .fx-page h2,
+  .fx-page h3,
+  .fx-page h4,
+  .fx-page h5,
+  .fx-page h6,
+  .fx-page p {
+    text-wrap: balance;
+  }
+}
+
+@utility fx-marquee-track {
+  animation: fx-marquee var(--fx-marquee-duration, 30s) linear infinite;
+}
+
+@keyframes fx-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*
+  Idle float for the footer mascot line-up. Six seconds and four pixels — slow
+  and shallow enough to read as breathing rather than as an animation, and each
+  mascot gets its own `--fx-float-delay` so the group never moves in unison.
+*/
+@utility fx-float {
+  animation: fx-float 6s ease-in-out infinite;
+  animation-delay: var(--fx-float-delay, 0ms);
+}
+
+@keyframes fx-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-float {
+    animation: none;
+  }
+}
+
+/*
+  Hero stage atmosphere.
+
+  The mascots are rendered as clay, so the internal heroes are built from the
+  same material: a soft panel with two or three colour blobs drifting behind the
+  figure. The drift is deliberately slow and small (±18px over 11s) — at that
+  speed it reads as light moving across a surface rather than as an animation
+  asking to be watched. Each blob gets its own `--fx-drift-delay` and
+  `--fx-drift-duration` so the group never syncs up.
+*/
+@utility fx-drift {
+  animation: fx-drift var(--fx-drift-duration, 11s) ease-in-out infinite;
+  animation-delay: var(--fx-drift-delay, 0ms);
+}
+
+@keyframes fx-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(14px, -18px, 0) scale(1.05);
+  }
+  66% {
+    transform: translate3d(-12px, 10px, 0) scale(0.97);
+  }
+}
+
+/*
+  Hero entrance.
+
+  One orchestrated sequence rather than scattered effects: eyebrow, headline,
+  lead, actions and stage arrive in reading order, 70ms apart. The overshoot
+  curve is the clay equivalent of a spring — the same squish the app's own
+  buttons have — and it is what keeps the arrival from feeling like a fade.
+*/
+@utility fx-rise {
+  animation: fx-rise 520ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: var(--fx-rise-delay, 0ms);
+}
+
+@keyframes fx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-drift,
+  .fx-rise {
+    animation: none;
+  }
+}
+
+@keyframes fx-marquee-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@layer base {
+  /* The live site drives scrolling with Lenis. Native smooth scrolling is the
+     closest dependency-free equivalent; anchor targets clear the 100px fixed navbar. */
+  html.fx-page {
+    scroll-behavior: smooth;
+  }
+
+  .fx-page section[id] {
+    scroll-margin-top: 100px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.fx-page {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer base {
+  /*
+    Section bands — the cloned sections are all transparent, which left the page
+    reading as one flat sheet. These alternate the three brand grounds (crema,
+    aqua, amarillo suave) so the page has vertical rhythm without touching the
+    section components.
+  */
+  .fx-page main > section {
+    position: relative;
+    background-color: var(--cuna-cream-2);
+  }
+
+  .fx-page main > section#features,
+  .fx-page main > section#use-cases,
+  .fx-page main > section#pricing,
+  .fx-page main > section#respaldo,
+  .fx-page main > section#planes,
+  .fx-page main > section#fundadora,
+  .fx-page main > section#catalogo,
+  .fx-page main > section#premium,
+  .fx-page main > section#faq-categorias,
+  .fx-page main > section#flujos {
+    background-color: var(--cuna-cream);
+  }
+
+  .fx-page main > section#how-it-works,
+  .fx-page main > section#integrations,
+  .fx-page main > section#filosofia,
+  .fx-page main > section#empezar {
+    background-color: var(--color-cuna-sky, #e8f8f6);
+  }
+
+  .fx-page main > section#testimonials {
+    background-color: #fff6de;
+  }
+
+  .fx-page main > section#hero {
+    background-color: transparent;
+  }
+
+  /* Icon marquee — sits on white so the app icons read as a clean strip.
+     Matched by id, not by position: it only runs on the home page now, and a
+     positional selector would have banded an unrelated section white on the
+     internal pages that dropped it. */
+  .fx-page main > section#marquee {
+    background-color: #fff;
+  }
+}
+
+/*
+ * Device frames (`CunaPhone`). One unitless scale drives the frame and the
+ * 200 x 400 screen inside it, stepping up at the two breakpoints so a pair of
+ * phones still fits a 375px viewport.
+ */
+.fx-phone {
+  --ph-s: var(--ph-s-base);
+}
+
+@media (min-width: 768px) {
+  .fx-phone {
+    --ph-s: var(--ph-s-md);
+  }
+}
+
+@media (min-width: 1280px) {
+  .fx-phone {
+    --ph-s: var(--ph-s-xl);
+  }
+}
