@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   description:
     "App creada por la Dra. Yasmín Sánchez León, pediatra. Registro diario, curvas de crecimiento OMS, vacunas y acompañamiento 24/7 para el embarazo y los primeros años.",
   icons: {
-    icon: "/brand/cunaco/app_child_care_logo.webp",
-    apple: "/brand/cunaco/app_child_care_logo.webp",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
   twitter: {
     card: "summary_large_image",
