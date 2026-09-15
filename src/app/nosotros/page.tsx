@@ -15,7 +15,7 @@ import { PhilosophySection } from "@/components/sites/fintechx-wbs-framer-websit
 export const metadata: Metadata = {
   title: "Nosotros — Dra. Yasmín Sánchez León, pediatra en Loja | Cuna&Co.",
   description:
-    "Cuna&Co. la fundó la Dra. Yasmín Sánchez León, pediatra y neonatóloga en Loja, Ecuador. Conoce su formación, su filosofía y qué función de la app respalda cada credencial.",
+    "Cuna&Co. la fundó la Dra. Yasmín Sánchez León, pediatra y puericultora en Loja, Ecuador. Conoce su formación, su filosofía y qué función de la app respalda cada credencial.",
   alternates: { canonical: "/nosotros" },
   openGraph: {
     title: "Nosotros — Dra. Yasmín Sánchez León, pediatra | Cuna&Co.",

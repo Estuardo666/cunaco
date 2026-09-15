@@ -37,7 +37,7 @@ const FAQS: readonly FaqItem[] = [
   {
     question: "¿Quién está detrás de Cuna&Co.?",
     answer:
-      "La Dra. Yasmín Sánchez León, pediatra, neonatóloga y puericultora en Loja, Ecuador. La idea nació de su propia experiencia como madre y como médica.",
+      "La Dra. Yasmín Sánchez León, pediatra y puericultora en Loja, Ecuador. La idea nació de su propia experiencia como madre y como médica.",
   },
 ];
 

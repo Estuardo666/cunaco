@@ -44,9 +44,9 @@ const BRIDGES: readonly Bridge[] = [
     tone: TONES.teal,
   },
   {
-    credential: "Neonatóloga",
-    feature: "Checklist de recién nacido",
-    detail: "Qué llevar, qué vigilar y qué es normal en las primeras semanas.",
+    credential: "Neurología pediátrica",
+    feature: "Hitos del desarrollo",
+    detail: "Los logros de cada etapa y las señales que conviene consultar a tiempo.",
     icon: "mascota_peso_bebe.webp",
     tone: TONES.aqua,
   },
@@ -58,7 +58,7 @@ const BRIDGES: readonly Bridge[] = [
     tone: TONES.amber,
   },
   {
-    credential: "Máster en Gestión en Salud",
+    credential: "Máster en VIH y Gerencia de Salud",
     feature: "Control de vacunación",
     detail: "El esquema completo con recordatorios de cada dosis y de las citas médicas.",
     icon: "ic_vacunas.webp",

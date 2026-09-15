@@ -37,7 +37,7 @@ export const FAQ_CATEGORIES: readonly FaqCategory[] = [
       {
         question: "¿La información de la app está revisada por un médico?",
         answer:
-          "Sí. Cuna&Co. la fundó la Dra. Yasmín Sánchez León, pediatra, neonatóloga y puericultora con consulta propia en Loja, Ecuador. El contenido educativo sale de su práctica clínica y las curvas de crecimiento son las oficiales de la OMS.",
+          "Sí. Cuna&Co. la fundó la Dra. Yasmín Sánchez León, pediatra, puericultora y con formación en neurología pediátrica, con consulta propia en Loja, Ecuador. El contenido educativo sale de su práctica clínica y las curvas de crecimiento son las oficiales de la OMS.",
       },
       {
         question: "Si veo algo raro en un registro, ¿la app me avisa?",

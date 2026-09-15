@@ -34,10 +34,9 @@ const FOUNDER_PHOTO: string | null = null;
  * above them instead of competing.
  */
 const CREDENTIALS: readonly { readonly label: string; readonly className: string }[] = [
-  { label: "Neonatóloga", className: "bg-cuna-aqua text-[#12403b]" },
+  { label: "Neurología pediátrica", className: "bg-cuna-aqua text-[#12403b]" },
   { label: "Puericultora", className: "bg-cuna-yellow-soft text-[#7a5200]" },
-  { label: "Máster en VIH", className: "bg-[#e8f8f6] text-[#1d6259]" },
-  { label: "Máster en Gestión en Salud", className: "bg-[#fff6de] text-[#7a5200]" },
+  { label: "Máster en VIH y Gerencia de Salud", className: "bg-[#e8f8f6] text-[#1d6259]" },
 ];
 
 interface SocialLink {

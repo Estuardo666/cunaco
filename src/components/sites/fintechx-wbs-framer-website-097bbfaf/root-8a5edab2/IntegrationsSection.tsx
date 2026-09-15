@@ -113,7 +113,7 @@ export function IntegrationsSection() {
 
               <p className="w-full text-center text-[16px] leading-[22px] font-medium text-[#5e6968] xl:text-[18px] xl:leading-[23.4px]">
                 Cada función nace de la práctica clínica de la Dra. Yasmín Sánchez León:
-                pediatra, neonatóloga y puericultora en Loja, Ecuador.
+                pediatra y puericultora en Loja, Ecuador.
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export function IntegrationsSection() {
             </div>
 
             <h3 className="w-full text-center text-[20px] leading-[24px] font-semibold text-[#1d6259] md:text-[24px] md:leading-[29px] xl:text-[28px] xl:leading-[33.6px]">
-                Pediatra · Neonatóloga · Puericultora · Máster en Gestión en Salud
+                Pediatra · Puericultora · Neurología pediátrica · Máster en VIH y Gerencia de Salud
               </h3>
             </div>
           </div>
